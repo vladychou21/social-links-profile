@@ -8,7 +8,13 @@
 
 
 /* VARIABLES */
-
+:root {
+    --BGCOLORDARKGRAY: hsl(0, 0%, 8%);
+    --BGCOLORMEDIUMGRAY800: hsl(0, 0%, 12%);
+    --BGCOLORMEDIUMGRAY700: hsl(0, 0%, 20%);
+    --TXTCOLORWHITE: hsl(0, 0%, 100%);
+    --TXTCOLORGREEN: hsl(75, 94%, 57%);
+}
 
 
 
@@ -17,7 +23,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     min-height: 100vh;
-    background-color: darkgray;
+    background-color: var(--BGCOLORDARKGRAY);
 
     display: grid;
     justify-content: center;
@@ -26,16 +32,19 @@ body {
 
 main {
     position: relative;
+    color: var(--TXTCOLORWHITE);
 }
 
 .profil-nav {
-    background-color: darkslategray;
+    background-color: var(--BGCOLORMEDIUMGRAY800);
     display: flex;
     flex-flow: column nowrap;
     gap: 1em;
 
+    width: 21.875rem;
     padding: 2em;
     text-align: center;
+    border-radius: 0.5em;
 }
 
 .profil-nav .nav-img {
@@ -46,25 +55,45 @@ main {
     margin: 0 auto;
 }
 
-.profil-nav .nav-profil-data {
-    margin: 0.5em 0em;
+.profil-nav .nav-profil-data h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.profil-nav .nav-profil-data p {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--TXTCOLORGREEN);
 }
 
 .profil-nav .nav-profil-description {
-
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 150%;
+    color: #ffffffb4;
 }
 
 .profil-nav .nav-links {
     display: flex;
     flex-flow: column nowrap;
-    gap: 0.5em;
+    gap: 0.75em;
 }
 
 .nav-links a {
     display: block;
-    background-color: yellow;
+    background-color: var(--BGCOLORMEDIUMGRAY700);
     padding: 0.75em 0em;
 
     text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 0.75em;
+    color: var(--TXTCOLORWHITE);
 }
 
+.nav-links a:is(:hover, :focus, :active) {
+    background-color: var(--TXTCOLORGREEN);
+    color: var(--BGCOLORMEDIUMGRAY700);
+}
