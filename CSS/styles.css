@@ -1,0 +1,70 @@
+/* INITIALISATION */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* VARIABLES */
+
+
+
+
+/*MAIN CODE*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+    background-color: darkgray;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    position: relative;
+}
+
+.profil-nav {
+    background-color: darkslategray;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+
+    padding: 2em;
+    text-align: center;
+}
+
+.profil-nav .nav-img {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.profil-nav .nav-profil-data {
+    margin: 0.5em 0em;
+}
+
+.profil-nav .nav-profil-description {
+
+}
+
+.profil-nav .nav-links {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5em;
+}
+
+.nav-links a {
+    display: block;
+    background-color: yellow;
+    padding: 0.75em 0em;
+
+    text-decoration: none;
+}
+
